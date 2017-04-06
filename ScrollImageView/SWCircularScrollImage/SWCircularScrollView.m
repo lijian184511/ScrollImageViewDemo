@@ -40,7 +40,7 @@
     [self addImageView];
     _currentImageIndex = 0;
     if (_imageCount>0) {
-        [self setInfoWithIndex:_currentImageIndex];
+        [self setImageWithIndex:_currentImageIndex];
     }
 }
 
@@ -52,6 +52,7 @@
 //设置scrollview属性
 - (void)scrollViewSetting
 {
+    //大于一张图片时才可循环滚动
     if (_imageCount >1) {
         self.contentSize = CGSizeMake(_imageSize.width * 3, self.frame.size.height);
         self.contentOffset = CGPointMake(_imageSize.width, 0);
@@ -108,7 +109,7 @@
 }
 
 //根据索引设置三张图片
-- (void)setInfoWithIndex:(NSInteger)index
+- (void)setImageWithIndex:(NSInteger)index
 {
     NSInteger leftIndex = (index - 1 + _imageCount)%_imageCount;
     //如果count等于1，则只有一张图片。
@@ -134,7 +135,7 @@
     else if (self.contentOffset.x < _imageSize.width){
         _currentImageIndex = (_currentImageIndex -1 + _imageCount)%_imageCount;
     }
-    [self setInfoWithIndex:_currentImageIndex];
+    [self setImageWithIndex:_currentImageIndex];
     
     self.contentOffset = CGPointMake(_imageSize.width, 0.0);
     
@@ -156,6 +157,7 @@
     }];
 }
 
+//点击图片
 - (void)bannerImageTap:(UITapGestureRecognizer *)tap
 {
     if ([self.swScrollViewDelegate respondsToSelector:@selector(didSelectImageAtIndex:)]) {
@@ -169,6 +171,7 @@
     [self didScrollReload];
 }
 
+//使用scrollNext方法时，会调用此方法。手指滑动不会走此方法
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
      [self didScrollReload];
