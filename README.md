@@ -1,0 +1,2 @@
+# ScrollImageViewDemo
+通过scrollview实现图片循环滚动，支持图片点击。通过实现图片重用机制，不会因为大量图片占用大量内存
