@@ -61,6 +61,7 @@ typedef void(^GetImageBlock)(UIImage *);
 
 @property (nonatomic,weak)id<SWCircularScrollViewDelegate> swScrollViewDelegate;
 
+@property (nonatomic,assign)BOOL autoScroll;  //是否自动滚动，为yes时，默认每3秒滚动一张图片
 /**
  @brief 刷新数据
  */

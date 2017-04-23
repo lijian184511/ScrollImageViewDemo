@@ -29,7 +29,7 @@
     _scrollView = [[SWCircularScrollView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     _scrollView.backgroundColor = [UIColor whiteColor];
     _scrollView.swScrollViewDelegate = self;
-    
+    _scrollView.autoScroll = YES;  //自动滚动
     _scrollView.imageUserEnable = YES;  //设置图片可点击
     [self.view addSubview:_scrollView];
 }

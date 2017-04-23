@@ -16,6 +16,8 @@
     CGSize       _imageSize;    //图片大小
     
     NSInteger    _imageCount;   //图片个数
+    
+    NSTimer      *_timer;
 }
 
 // Only override drawRect: if you perform custom drawing.
@@ -162,6 +164,17 @@
 {
     if ([self.swScrollViewDelegate respondsToSelector:@selector(didSelectImageAtIndex:)]) {
         [self.swScrollViewDelegate didSelectImageAtIndex:_currentImageIndex];
+    }
+}
+
+- (void)setAutoScroll:(BOOL)autoScroll
+{
+    _autoScroll = autoScroll;
+    if (autoScroll) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(scrollNext) userInfo:nil repeats:YES];
+    }else{
+        [_timer invalidate];
+        _timer = nil;
     }
 }
 
