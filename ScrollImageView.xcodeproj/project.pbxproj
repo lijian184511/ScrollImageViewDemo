@@ -441,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScrollImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.ScrollImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ScrollImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.ScrollImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -523,6 +525,7 @@
 				5069DBCC1E966F6B004CFDAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5069DBCD1E966F6B004CFDAA /* Build configuration list for PBXNativeTarget "ScrollImageViewTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +534,7 @@
 				5069DBCF1E966F6B004CFDAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5069DBD01E966F6B004CFDAA /* Build configuration list for PBXNativeTarget "ScrollImageViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +543,7 @@
 				5069DBD21E966F6B004CFDAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
